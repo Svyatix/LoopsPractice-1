@@ -25,9 +25,17 @@ console.log("count: " + count);
 /*ЗАДАНИЕ С*/
 let stringC = "(((((())))))";
 let countLeft = 0;
-let countRight = 0;
+let countCorrect = 0;
 for (let i = 0; i<stringC.length;i++){
-	if (stringC[i] == "(") countLeft++;
-	else countRight++;
+	if (stringC[i] == "("){
+		countCorrect++;
+		countLeft++;
+	}
+	else countCorrect--;
+	if (countCorrect<0) break;
 }
-countRight == countLeft ? console.log("Correct"): console.log("Incorrect");
+if (countCorrect == 0){
+	console.log("Correct");
+	console.log("countLeft: " + countLeft);
+}
+else console.log("Incorrect");
