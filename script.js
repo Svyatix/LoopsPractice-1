@@ -21,3 +21,13 @@ for (let i = 0; i <numberArray.length-1; i++) {
 	else count = 1;
 }
 console.log("count: " + count);
+
+/*ЗАДАНИЕ С*/
+let stringC = "(((((())))))";
+let countLeft = 0;
+let countRight = 0;
+for (let i = 0; i<stringC.length;i++){
+	if (stringC[i] == "(") countLeft++;
+	else countRight++;
+}
+countRight == countLeft ? console.log("Correct"): console.log("Incorrect");
